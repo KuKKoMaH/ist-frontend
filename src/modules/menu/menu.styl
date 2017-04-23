@@ -1,0 +1,80 @@
+.wrapper
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 100
+  background: $white
+  height: 45px
+
+  @media (max-width: $breakpoint-sm - 1)
+    height: 0
+
+.icon
+  position: fixed
+  background: url(modules/menu/sprite-menu.svg)
+  left: 1em
+  top: 1em
+  cursor: pointer
+
+  @media (min-width: $breakpoint-sm)
+    display: none
+
+.close
+  position: fixed
+  background: url(modules/menu/sprite-close.svg)
+  top: 1em
+  right: 1em
+  cursor: pointer
+
+  @media (min-width: $breakpoint-sm)
+    display: none
+
+.items
+  text-align: justify
+  line-height: 0
+  width: 100%
+
+  @media (max-width: $breakpoint-sm - 1)
+    position: fixed
+    background: $white
+    top: 0
+    left: 0
+    height: 100%
+    padding-top: 3em
+    display: none
+
+
+  &:after
+    content: ''
+    display: inline-block
+    width: 100%
+    height: 0
+    overflow: hidden
+    visibility: hidden
+
+.active
+  display: block
+
+.item
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  font-size: .9em
+  line-height: 45px
+  font-weight: bold
+  color: $green400
+
+  @media (max-width: $breakpoint-md - 1)
+    font-size: .7em
+
+  @media (max-width: $breakpoint-sm - 1)
+    display: block
+    text-align: center
+    font-size: 1.2em
+
+  &:before
+    content: '◆'
+    position: absolute
+    right: 100%
+    margin-right: 10px

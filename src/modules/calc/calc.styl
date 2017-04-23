@@ -1,0 +1,104 @@
+.wrapper
+  padding: 5em 0 0
+
+  @media (max-width: $breakpoint-sm - 1)
+    padding-top: 2em
+
+  @media (max-width: $breakpoint-md - 1)
+    overflow: hidden
+
+.content
+  margin-right: 15%
+
+  @media (max-width: $breakpoint-md - 1)
+    margin-right: 0
+
+
+.title
+  font-family: 'Averin Next', sans-serif
+  font-size: 2.5em
+  line-height: 1.1
+  margin: 0 0 1em
+
+.subtitle
+  font-size: 2em
+  line-height: 1.1
+  color: $green300
+  margin: 0 0 .5em
+
+.text
+  font-size: 1.5em
+  line-height: 1.2
+  font-weight: 200
+
+.form
+  background: $green300
+  padding: 3em 2.5em
+  position: relative
+  margin-bottom: 5em
+  box-shadow: 6px 6px 21px 1px rgba($black, .15)
+  margin-left: 25%
+
+  @media (max-width: $breakpoint-md - 1)
+    margin-left: 0
+
+  @media (max-width: $breakpoint-sm - 1)
+    margin-left: -($gutter-half)
+    margin-right: -($gutter-half)
+    margin-bottom: 2em
+
+.image
+  position: absolute
+  width: 342px
+  height: 540px
+  right: 100%
+  margin-right: -2em
+  bottom: -5em
+
+  @media (max-width: $breakpoint-md - 1)
+    right: auto
+    left: 100%
+    margin-right: 0
+    margin-left: -3em
+    transform: scaleX(-1)
+
+  @media (max-width: $breakpoint-sm - 1)
+    display: none
+
+.input
+  margin-bottom: .5em
+
+.file
+  position: relative
+  overflow: hidden
+  height: 40px
+  line-height: 40px
+  color: $white
+  margin: 1em 0
+
+  &:hover
+    .file_name
+      text-decoration: none
+
+  &:before
+    content: ' '
+    sprite('modules/calc/sprite-file.png')
+    position: absolute
+    top: 7px
+
+  &_input
+    position: absolute
+    opacity: 0
+    width: 200%
+    height: 200%
+    right: 0
+    top: 0
+    cursor: pointer
+
+  &_name
+    text-decoration: underline
+    font-weight: bold
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    padding-left: 40px

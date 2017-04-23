@@ -1,0 +1,60 @@
+.wrapper
+  padding: 2em 0 3em
+  background: $grey url(modules/directions/bg.jpg) 15% 10% no-repeat
+
+  @media (max-width: $breakpoint-sm - 1)
+    padding-bottom: 0
+
+.title
+  margin-bottom: 1em
+
+.text
+  font-weight: 200
+  margin-bottom: 1em
+
+.right
+  background: $white
+  border-radius: 3px
+  padding: 2em
+
+  @media (max-width: $breakpoint-md - 1)
+    padding: 1em
+
+  @media (max-width: $breakpoint-sm - 1)
+    margin: 2em (-($gutter-half)) 0
+
+.bullet
+  margin: 2em 0
+  font-size: 1.125em
+  text-transform: uppercase
+  padding-left: 5em
+  font-weight: bold
+  position: relative
+
+  @media (max-width: $breakpoint-md - 1)
+    margin: 1.5em 0
+
+  @media (max-width: $breakpoint-sm - 1)
+    padding-left: 4em
+
+  &:before
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    position: absolute
+    right: 100%
+    margin-right: -4em
+    top: 50%
+    transform: translateY(-50%)
+
+    @media (max-width: $breakpoint-sm - 1)
+      margin-right: -3em
+
+for i in (1..7)
+  .icon{i}:before
+    background: url('modules/directions/icons/sprite-icon' + i + '.svg')
+
+.form
+  font-size: 1.3em
+  font-weight: bold
+  margin-bottom: 1em

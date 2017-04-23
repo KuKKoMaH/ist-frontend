@@ -1,0 +1,60 @@
+#examples.examples-wrapper(data-original='modules/examples/bg.jpg')
+  .w
+    .c.c15
+      h2.examples-title ПРИМЕРЫ ВЫПОЛНЕННЫХ РАБОТ
+      p.examples-subtitle Наши ключевые объекты
+  .w
+    .c.c8
+      .examples-item.examples-primary(data-id=1)
+        .examples-image-wrapper: img.examples-image(src='modules/examples/img/1.jpg')
+        .examples-text Ветка метро “Сквозная” в г. Москва
+    .c.c7
+      .examples-item.examples-secondary(data-id=2)
+        .examples-image-wrapper: img.examples-image(src='modules/examples/img/2.jpg')
+        .examples-text Жилой комплекс “Башни Саурона”#[br]в г. Санкт-Петербург
+      .examples-item.examples-secondary(data-id=3)
+        .examples-image-wrapper: img.examples-image(src='modules/examples/img/3.jpg')
+        .examples-text Торговый центр “Пустырь” в г. Махачкала
+    .c.c5
+      .examples-item.examples-small(data-id=4)
+        .examples-image-wrapper: img.examples-image(src='modules/examples/img/4.jpg')
+        .examples-text ЖК “Муровейник”#[br]в г. Ярославль
+    .c.c5
+      .examples-item.examples-small(data-id=5)
+        .examples-image-wrapper: img.examples-image(src='modules/examples/img/5.jpg')
+        .examples-text Бизнес-центр “ОКО”#[br]в г. Москва
+    .c.c5
+      .examples-item.examples-small(data-id=6)
+        .examples-image-wrapper: img.examples-image(src='modules/examples/img/6.jpg')
+        .examples-text Бизнец-центр “Лупа”#[br]в деревне Лупино
+    .c.c5
+      .examples-item.examples-small(data-id=7)
+        .examples-image-wrapper: img.examples-image(src='modules/examples/img/7.jpg')
+        .examples-text Храм Святого Луки#[br]в г. Великий Новгород
+    .c.c5
+      .examples-item.examples-small(data-id=8)
+        .examples-image-wrapper: img.examples-image(src='modules/examples/img/8.jpg')
+        .examples-text Бизнес-центр “ОКО”#[br]в г. Москва
+    .c.c5
+      .examples-item.examples-small(data-id=9)
+        .examples-image-wrapper: img.examples-image(src='modules/examples/img/9.jpg')
+        .examples-text Бизнец-центр “Лупа”#[br]в деревне Лупино
+
+script.
+  var item = {
+    "title":   "Ветка метро “Сквозная” в г. Москва",
+    "text":    "<p>Компанией Адамант-Строй в период с декабря 2014 по август 2017 осуществляется полный комплекс строительства несколько многоэтажных жилых домов «под ключ» в г.Сортавала и г.Суоярви.</p>",
+    "done":    "август 2017 г.",
+    "s":       "8000 м²",
+    "address": "Республика Карелия, г. Сортавала",
+    "photos":  [
+      { thumb: 'https://source.unsplash.com/random/198x115?1', full: 'https://source.unsplash.com/random/647x359?1' },
+      { thumb: 'https://source.unsplash.com/random/198x115?2', full: 'https://source.unsplash.com/random/647x359?2' },
+      { thumb: 'https://source.unsplash.com/random/198x115?3', full: 'https://source.unsplash.com/random/647x359?3' },
+    ]
+  };
+  var examples = [];
+
+  for(var i = 0; i < 10; i++) {
+    examples.push(item);
+  }

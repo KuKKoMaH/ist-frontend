@@ -1,22 +1,12 @@
 wrapper()
-  margin-left: auto
-  margin-right: auto
-  width: 100%
   font-size: 0
-  table-layout: fixed
-  display: table
-  cf()
-  background-grid()
 
   > *
     font-size: $font-size
 
-  @media (min-width: $breakpoint-sm) and (max-width $breakpoint-md - 1)
-    width: $container-sm
-  @media (min-width: $breakpoint-md) and (max-width $breakpoint-lg - 1)
-    width: $container-md
-  @media (min-width: $breakpoint-lg)
-    width: $container-lg
+    @media (max-width: $breakpoint-lg - 1)
+      font-size: 16px
+
 
 col(cols = 1, gutters = both)
   min-height: 1px
@@ -24,7 +14,6 @@ col(cols = 1, gutters = both)
   vertical-align: top
   padding-left: $gutter-half
   padding-right: $gutter-half
-  font-size: $font-size
   width: 100%
 
 cf()

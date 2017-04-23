@@ -26,6 +26,11 @@ module.exports = function ( entries, globals ) {
             presets: ['es2015', 'stage-2'],
           }
         },
+        // Глобальный jQuery
+        {
+          test: require.resolve("jquery"),
+          loader: "expose-loader?$!expose-loader?jQuery"
+        },
       ]
     },
     plugins: [

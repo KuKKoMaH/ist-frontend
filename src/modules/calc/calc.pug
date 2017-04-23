@@ -1,0 +1,19 @@
+include ../input/input
+include ../button/button
+
+.calc-wrapper: .w
+  .c.c8
+    .calc-content
+      h2.calc-title Оставьте заявку и получите бесплатный расчет стоимости:
+      h3.calc-subtitle У вас есть проект в цифровом виде?
+      p.calc-text Прикрипите файлы и #[b получите Бесплатно полный расчет] стоимости Вашего проекта
+  .c.c7
+    .calc-form
+      .calc-input: +input()(placeholder='Телефон')
+      .calc-input: +input()(placeholder='Ваше имя')
+      .calc-input: +input()(placeholder='Email')
+      .calc-file
+          .calc-file_name Прикрепить фаил
+          input(type='file').calc-file_input
+      .calc-image(data-original='modules/calc/girl.png')
+      +button('input')(type='submit' value='ОТПРАВИТЬ')

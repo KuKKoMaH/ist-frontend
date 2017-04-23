@@ -1,0 +1,53 @@
+.input
+  display: block
+  width: 100%
+  color: $white
+  font-weight: 200
+  border: 3px solid $white
+  background: transparent
+  font-family: inherit
+  font-size: inherit
+  outline: 0
+  padding: 14px 16px
+  transition: all .1s ease-out
+
+  @media (max-width: $breakpoint-sm - 1)
+    margin-bottom: 1em
+
+  &::-webkit-input-placeholder
+    color: $white
+  &::-moz-placeholder
+    color: $white
+  &:-ms-input-placeholder
+    color: $white
+  &:-moz-placeholder
+    color: $white
+
+  &:focus
+    background: $white
+    color: $black
+
+    &::-webkit-input-placeholder
+      color: $black
+    &::-moz-placeholder
+      color: $black
+    &:-ms-input-placeholder
+      color: $black
+    &:-moz-placeholder
+      color: $black
+
+.sm
+  padding: 9px 11px
+
+.black
+  border-color: $black
+  color: $black
+
+  &::-webkit-input-placeholder
+    color: $black
+  &::-moz-placeholder
+    color: $black
+  &:-ms-input-placeholder
+    color: $black
+  &:-moz-placeholder
+    color: $black

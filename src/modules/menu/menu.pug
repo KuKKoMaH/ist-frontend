@@ -1,0 +1,15 @@
+- var menu = []
+- menu.push({title: 'ОСНОВНЫЕ НАПРАВЛЕНИЯ', link:'#directions'})
+- menu.push({title: 'ПРЕИМУЩЕСТВА', link:'#choose'})
+- menu.push({title: 'КЛЮЧЕВЫЕ ОБЪЕКТЫ', link:'#examples'})
+- menu.push({title: 'ВИДЫ РАБОТ', link:'#'})
+- menu.push({title: 'ОТЗЫВЫ', link:'#'})
+- menu.push({title: 'КОНТАКТЫ', link:'#contacts'})
+.menu-wrapper
+  .menu-icon
+  .w: .c.c15
+    nav.menu-items
+      .menu-close
+      each item in menu
+        a.menu-item(href=item.link)= item.title
+        |&nbsp;

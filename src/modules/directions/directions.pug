@@ -1,0 +1,21 @@
+include ../input/input
+include ../button/button
+
+- var bullets = ['Жилые дома', 'Гостиницы', 'Общественные здания', 'Торговые центры', 'Бизнес-центры', 'Производственные здания', 'Складские комплексы']
+#directions.directions-wrapper: .w
+  .c.c7-lg.c8
+    .directions-left
+      h2.directions-title Основные направления строительства
+      p.directions-text Группа компаний «ИнвестСтройТрест» - сервис для землевладельцев с производством полного цикла от индивидуального проектирования и строительства загородного дома под ключ до закрытия всех юридических сделок, связанных с недвижимостью.
+      .directions-form Поговорить с техническим директором:
+      form: .wf
+        .c.c10.c8-lg
+          +input('sm', true)(placeholder='Телефон')
+        .c.c5
+          +button('input', true)(type='submit' value='Жду звонка')
+
+  .c.c1.only-lg
+  .c.c7
+    .directions-right
+      each bullet, i in bullets
+        .directions-bullet(class='directions-icon' + (i+1))= bullet

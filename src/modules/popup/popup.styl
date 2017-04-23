@@ -1,0 +1,85 @@
+@import "magnific-popup/dist/magnific-popup.css"
+
+.container
+  display: none
+
+.wrapper
+  max-width: 900px
+  margin: 0 auto
+  position: relative
+
+  :global .mfp-close
+    background: #79a465
+    color: #fff
+    border-radius: 0 0 0 8px
+
+.head
+  background: #89b775
+  padding: 1em
+  color: $white
+
+.content
+  background: $white
+  padding: 1.5em 2em
+
+  p
+    margin: 0 0 .5em
+
+.title
+  font-family: 'Averin Next', sans-serif
+  font-size: 1.7em
+  line-height: 1.1
+  padding: 0 0 .5em .5em
+
+.text,
+.done,
+.s,
+.address
+  display: block
+
+.label
+  font-weight: bold
+  margin-bottom: .3em
+
+.value
+  font-weight: 200
+  margin-bottom: 1em
+
+.photos
+  cf()
+
+.photo
+  float: left
+  display: block
+  margin: 0 auto
+  box-shadow: 6px 6px 13px 1px rgba($black, .15)
+  height: auto
+
+  @media (max-width: 900px)
+    float: none
+
+.thumbs
+  float: right
+
+  @media (max-width: 900px)
+    float: none
+    margin-top: 7px
+    text-align: center
+    line-height: 0
+
+.thumb
+  display: block
+  margin-bottom: 7px
+  cursor: pointer
+  box-shadow: 6px 6px 13px 1px rgba($black, .15)
+  transition: all .1s ease-out
+  height: auto
+
+  &:hover
+    opacity: .8
+
+  @media (max-width: 900px)
+    display: inline-block
+    vertical-align: middle
+    max-width: 30%
+    margin: 0 1%

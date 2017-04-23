@@ -1,0 +1,85 @@
+.wrapper
+  padding: 3em 0 2em
+
+.menu
+  background: $green300
+  color: $white
+  box-shadow: 14px 14px 26px 0 rgba($green300, .5)
+
+.title
+  background: $green400
+  margin: 0
+  padding: .75em .5em
+  font-size: 2em
+
+.items :first-child:before
+  display: none
+
+.item
+  position: relative
+  font-weight: 200
+  line-height: 1.2
+  padding: 1em 2em 1em
+  transition: all .1s ease-out
+  cursor: pointer
+
+  &:hover
+    background: $green500
+
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: 1em
+    right: 1em
+    height: 1px
+    top: 0
+    background: #84b170
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    background: url(modules/service/sprite-arrow.png)
+    right: 1em
+    top: 50%
+    margin-top: -10px
+    opacity: 0
+    transition: all .1s ease-out
+
+.item_active
+  font-weight: bold
+  background: $green500
+
+  &:after
+    opacity: 1
+
+.tabs
+  position: relative
+  margin-left: 8%
+
+  @media (max-width: $breakpoint-lg - 1)
+    margin-left: 0
+
+.tab
+  position: absolute
+  opacity: 0
+  top: 0
+  width: 100%
+  z-index: 0
+  transition: all .2s ease-out
+  padding-top: 1em
+
+.tab_active
+  position: relative
+  opacity: 1
+  z-index: 1
+
+.tab_title
+  font-size: 2em
+  line-height: 1.1
+  font-weight: 200
+  margin-bottom: 1em
+
+.text
+  text-align: justify

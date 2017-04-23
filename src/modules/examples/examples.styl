@@ -1,0 +1,72 @@
+.wrapper
+  background: #004354 50% 50% no-repeat
+  padding: 5em 0 2em
+  color: $white
+  background-size: cover
+
+.title
+  margin: 0
+
+.subtitle
+  font-weight: 200
+  margin: 0
+  font-size: 1.65em
+  margin-bottom: 1em
+
+.image-wrapper
+  position: relative
+
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: $black
+    opacity: .2
+    transition: all .1
+
+.image
+  display: block
+  width: 100%
+
+.text
+  font-weight: bold
+  padding: 1em 0
+  padding-left: 2em
+  line-height: 1.1
+
+.item
+  background: $blue
+  margin-bottom: 1.5em
+
+  &:hover
+    cursor: pointer
+
+    .image-wrapper:after
+      opacity: 0
+
+  @media (max-width: $breakpoint-sm - 1)
+    margin-left: -($gutter-half)
+    margin-right: -($gutter-half)
+
+
+.primary
+  padding-top: 2em
+
+  .image-wrapper
+    margin-left: 2em
+
+    @media (max-width: $breakpoint-sm - 1)
+      margin: 0
+
+
+.secondary
+  padding-top: 2em
+
+.small
+  .image-wrapper
+    margin: 0 1.5em
+

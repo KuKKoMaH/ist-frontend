@@ -1,0 +1,28 @@
+.clients-wrapper: .w
+  .c.c15
+    h2.clients-title Наши клиенты#[br]& пантнёры
+  .c.c15
+    .clients-items
+      each val, i in Array(16)
+        .clients-item(data-id=(i+1))
+          img.clients-image(src='modules/clients/img/' + (i + 1) + '.jpg')
+
+script.
+script.
+  var item = {
+    "title":   "Ветка метро “Сквозная” в г. Москва",
+    "text":    "<p>Компанией Адамант-Строй в период с декабря 2014 по август 2017 осуществляется полный комплекс строительства несколько многоэтажных жилых домов «под ключ» в г.Сортавала и г.Суоярви.</p>",
+    "done":    "август 2017 г.",
+    "s":       "8000 м²",
+    "address": "Республика Карелия, г. Сортавала",
+    "photos":  [
+      { thumb: 'https://source.unsplash.com/random/198x115?1', full: 'https://source.unsplash.com/random/647x359?1' },
+      { thumb: 'https://source.unsplash.com/random/198x115?2', full: 'https://source.unsplash.com/random/647x359?2' },
+      { thumb: 'https://source.unsplash.com/random/198x115?3', full: 'https://source.unsplash.com/random/647x359?3' },
+    ]
+  };
+  var clients = [];
+
+  for(var i = 0; i < 10; i++) {
+    clients.push(item);
+  }

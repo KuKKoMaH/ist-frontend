@@ -1,0 +1,3 @@
+mixin input(size, black)
+  - var className = 'input-input' + (size ? ' input-' + size : '') + (black ? ' input-black' : '')
+  input(class=className)&attributes(attributes)

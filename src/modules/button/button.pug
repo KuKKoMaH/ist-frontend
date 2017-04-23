@@ -1,0 +1,4 @@
+mixin button(tag, fill)
+  - if(!tag) tag = 'button'
+  - var className = 'button-button' + (fill ? ' button-fill' : '')
+  #{tag}(class=className)&attributes(attributes)

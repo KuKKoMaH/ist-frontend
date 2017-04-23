@@ -1,0 +1,62 @@
+.wrapper
+  background: $white url(modules/footer/bg.png) 50% 50% no-repeat
+  padding-top: 2.5em
+
+.text
+  @media (max-width: $breakpoint-md - 1)
+    font-size: .8em
+
+.title
+  font-family: 'Averin Next', sans-serif
+  font-weight: bold
+  line-height: 1.2
+  text-transform: uppercase
+
+  @media (min-width: $breakpoint-lg)
+    margin-right: 10%
+
+.subtitle
+  font-size: .75em
+
+.socials
+  text-align: center
+  word-spacing: 1em
+
+  @media (max-width: $breakpoint-sm - 1)
+    margin: 1em 0
+
+.icon
+  display: inline-block
+  vertical-align: middle
+  transition: all .1s ease-out
+
+  &:hover
+    opacity: .8
+
+for icon in 'vk' 'fb' 'ok'
+  .{icon}
+    background: url('modules/footer/sprite-' + icon + '.png')
+
+.contacts
+  text-align: right
+
+  @media (max-width: $breakpoint-md - 1)
+    text-align: center
+
+.phone
+  font-family: 'Averin Next', sans-serif
+  color: $green300
+  font-size: 1.5em
+  font-weight: bold
+
+.callback
+  font-weight: bold
+
+.confident
+  background: rgba($green200, .3)
+  text-align: center
+  margin-top: 2em
+
+.confident_link
+  color: $green900
+  font-size: .65em
