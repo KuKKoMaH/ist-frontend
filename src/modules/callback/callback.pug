@@ -1,0 +1,13 @@
+include ../input/input
+include ../button/button
+
+.callback-container
+  #callback.callback-wrapper
+    .callback-title Заказать звонок
+    .callback-subtitle Оставьте заявку на входящий звонок и наш специалист свяжется с вами
+    form
+      .callback-input
+        +input()(placeholder='Телефон')
+      .callback-input
+        +input()(placeholder='Ваше имя')
+      +button('input')(type='submit' value='Отправить')

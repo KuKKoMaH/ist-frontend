@@ -96,6 +96,14 @@ function combine( styles ) {
             }));
           });
         }
+      },
+      svgsprite:      {
+        shape: {
+          spacing: {
+            padding: 10,
+            box:     "padding"
+          },
+        }
       }
     }),
     postcssCopy({
