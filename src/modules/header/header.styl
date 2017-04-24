@@ -3,11 +3,13 @@
   background-size: cover
   color: $white
   padding: 2em 0 7em
-  margin-top: 45px
 
   @media (max-width: $breakpoint-sm - 1)
-    margin-top: 0
     padding-bottom: 2em
+
+  :global .wpcf7-response-output
+    padding-left: $gutter-half
+    margin-top: 15px
 
 .logo
   display: block
