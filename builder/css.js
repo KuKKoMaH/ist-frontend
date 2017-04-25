@@ -100,7 +100,7 @@ function combine( styles ) {
       svgsprite:      {
         shape: {
           spacing: {
-            padding: 10,
+            padding: 3,
             box:     "padding"
           },
         }
