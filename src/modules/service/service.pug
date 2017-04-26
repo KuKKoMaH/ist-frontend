@@ -6,11 +6,12 @@
         h3.service-title Наши услуги
         .service-items
           each tab, i in tabs
-            .service-item(class= i === 0 ? 'service-item_active' : '')= tab
+            .service-item(class= i === 0 ? 'service-item_active' : '' data-target=i)= tab
     .c.c10
       .service-tabs
         each tab, i in tabs
-          .service-tab(class= i === 0 ? 'service-tab_active' : '')
+          .service-header(class= i === 0 ? 'service-header_active' : '' data-target=i)= tab
+          .service-tab(class= i === 0 ? 'service-tab_active' : '' data-tab=i): .service-inner
             .service-tab_title= tab
             img.serive-image(src='modules/service/item.jpg')
             .service-text

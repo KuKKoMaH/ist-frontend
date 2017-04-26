@@ -6,14 +6,25 @@
   color: $white
   box-shadow: 14px 14px 26px 0 rgba($green300, .5)
 
+  @media (max-width: $breakpoint-sm - 1)
+    box-shadow: none
+
 .title
   background: $green400
   margin: 0
   padding: .75em .5em
   font-size: 2em
 
-.items :first-child:before
-  display: none
+  @media (max-width: $breakpoint-sm - 1)
+    margin-left: -($gutter-half)
+    margin-right: -($gutter-half)
+
+.items
+  &:first-child:before
+    display: none
+
+  @media (max-width: $breakpoint-sm - 1)
+    display: none
 
 .item
   position: relative
@@ -60,6 +71,23 @@
   @media (max-width: $breakpoint-lg - 1)
     margin-left: 0
 
+.header
+  display: none
+  background: $green300
+  margin-left: -($gutter-half)
+  margin-right: -($gutter-half)
+  padding: 1em $gutter-half
+  color: $white
+  font-size: 1.1em
+  line-height: 1.1
+  border-bottom: 1px solid #84b170
+
+  @media (max-width: $breakpoint-sm - 1)
+    display: block
+
+.header_active
+  background: $green500
+
 .tab
   position: absolute
   opacity: 0
@@ -69,10 +97,23 @@
   transition: all .2s ease-out
   padding-top: 1em
 
+  @media (max-width: $breakpoint-lg - 1)
+    position: static
+    opacity: 1
+    max-height: 0
+    overflow: hidden
+    padding: 0
+
+.inner
+  display: block
+
 .tab_active
   position: relative
   opacity: 1
   z-index: 1
+
+  @media (max-width: $breakpoint-lg - 1)
+    max-height: 1000px
 
 .tab_title
   font-size: 2em
@@ -82,6 +123,7 @@
 
   @media (max-width: $breakpoint-sm - 1)
     font-size: 1.5em
+    padding-top: 1em
 
 .text
   text-align: justify
