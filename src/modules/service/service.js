@@ -1,22 +1,38 @@
-const items = $('.' + service_item);
-const mobile_items = $('.' + service_header);
-const tabs = $('.' + service_tab);
+const $items = $('.' + service_item);
+const $mobileItems = $('.' + service_header);
+const $tabs = $('.' + service_tab);
+const $window = $(window);
 
-items.on('click', changeTab);
-mobile_items.on('click', changeTab);
+let currentIndex = 0;
+let windowWidth = 0;
+
+$items.on('click', changeTab);
+$mobileItems.on('click', changeTab);
+
+const calcWindowWidth = () => (windowWidth = $window.outerWidth());
+$window.on('resize', calcWindowWidth);
+calcWindowWidth();
+
+const isNarrow = () => windowWidth < 768;
 
 function changeTab() {
-  items.removeClass(service_item_active);
-  mobile_items.removeClass(service_header_active);
-  $(this).addClass(service_item_active);
+  const $this = $(this);
+  const index = $this.data('target');
+  const newTab = $tabs.filter('[data-tab=' + index + ']');
 
-  const index = $(this).data('target');
-  tabs
-    .css({maxHeight: ''})
-    .removeClass(service_tab_active);
-  const newTab = tabs.filter('[data-tab=' + index + ']');
+  if (index > currentIndex && isNarrow()) {
+    const offset = $window.scrollTop();
+    const height = $tabs.filter('[data-tab=' + currentIndex + ']').innerHeight();
+    $window.scrollTop(offset - height);
+  }
 
-  newTab
-    .css({maxHeight: newTab.find('.' + service_inner).innerHeight()})
-    .addClass(service_tab_active);
+  $items.removeClass(service_item_active);
+  $mobileItems.removeClass(service_header_active);
+  $items.filter('[data-target=' + index + ']').addClass(service_item_active);
+  $mobileItems.filter('[data-target=' + index + ']').addClass(service_header_active);
+
+  $tabs.removeClass(service_tab_active);
+  newTab.addClass(service_tab_active);
+
+  currentIndex = index;
 }

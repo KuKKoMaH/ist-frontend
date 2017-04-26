@@ -13,6 +13,10 @@
   font-weight: 200
   margin-bottom: 1em
 
+.items
+  @media (max-width: $breakpoint-sm - 1)
+    display: none
+
 .item
   font-size: 1.3em
   margin-bottom: .5em
@@ -54,6 +58,11 @@
   overflow: hidden
   z-index: 1
   box-shadow: 6px 6px 21px 0 rgba($black, .15)
+
+  @media (max-width: $breakpoint-sm - 1)
+    background-color: transparent
+    margin: 0 -($gutter-half)
+    box-shadow: none
 
 .tab
   position: absolute
@@ -107,6 +116,18 @@
 
 .content
   padding: 2em 2em 0 2em
+
+  @media (max-width: $breakpoint-sm - 1)
+    padding: 0 $gutter-half
+
+.company
+  display: none
+  float: right
+  color: $green300
+  font-size: 1.3em
+
+  @media (max-width: $breakpoint-sm - 1)
+    display: block
 
 .name
   font-size: 1.3em
