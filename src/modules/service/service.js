@@ -20,7 +20,7 @@ function changeTab() {
   const index = $this.data('target');
   const newTab = $tabs.filter('[data-tab=' + index + ']');
 
-  if (index > currentIndex && isNarrow()) {
+  if (currentIndex !== null && index > currentIndex && isNarrow()) {
     const offset = $window.scrollTop();
     const height = $tabs.filter('[data-tab=' + currentIndex + ']').innerHeight();
     $window.scrollTop(offset - height);
@@ -28,10 +28,15 @@ function changeTab() {
 
   $items.removeClass(service_item_active);
   $mobileItems.removeClass(service_header_active);
+  $tabs.removeClass(service_tab_active);
+
+  if(index === currentIndex && isNarrow()) {
+    currentIndex = null;
+    return;
+  }
+
   $items.filter('[data-target=' + index + ']').addClass(service_item_active);
   $mobileItems.filter('[data-target=' + index + ']').addClass(service_header_active);
-
-  $tabs.removeClass(service_tab_active);
   newTab.addClass(service_tab_active);
 
   currentIndex = index;
