@@ -34,6 +34,7 @@
   font-size: 1.5em
   line-height: 1.2
   font-weight: 200
+  margin-right: 10%
 
 .form
   background: $green300
@@ -53,11 +54,19 @@
 
 .image
   position: absolute
-  width: 342px
-  height: 540px
+  //width: 342px
+  //height: 540px
+  width: 360px
+  height: 480px
   right: 100%
   margin-right: -2em
   bottom: -5em
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: 50% 100%
+
+  @media (max-width: $breakpoint-lg - 1)
+    width: 300px
 
   @media (max-width: $breakpoint-md - 1)
     right: auto

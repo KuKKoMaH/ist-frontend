@@ -4,12 +4,15 @@
 - menu.push({title: 'КЛЮЧЕВЫЕ ОБЪЕКТЫ', link:'#examples'})
 - menu.push({title: 'ВИДЫ РАБОТ', link:'#'})
 - menu.push({title: 'ОТЗЫВЫ', link:'#'})
-- menu.push({title: 'КОНТАКТЫ', link:'#contacts'})
+//- menu.push({title: 'КОНТАКТЫ', link:'#contacts'})
 .menu-wrapper
   .menu-icon
-  .w: .c.c15
-    nav.menu-items
+  .w
+    .c.c12: nav.menu-items
       .menu-close
       each item in menu
         a.menu-item(href=item.link)= item.title
         |&nbsp;
+      .menu-phone.menu-phone_small 8 800 500 33 25
+    .c.c3
+      .menu-phone 8 800 500 33 25

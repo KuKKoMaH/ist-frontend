@@ -6,11 +6,11 @@ $('.' + examples_item).on('click', function () {
   openPopup(item);
 });
 
-$('.' + clients_item).on('click', function () {
-  const id = $(this).data('id');
-  const item = window.clients[id];
-  openPopup(item);
-});
+// $('.' + clients_item).on('click', function () {
+//   const id = $(this).data('id');
+//   const item = window.clients[id];
+//   openPopup(item);
+// });
 
 function openPopup( data ) {
   $.magnificPopup.open({
